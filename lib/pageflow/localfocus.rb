@@ -3,7 +3,7 @@ require 'pageflow/localfocus/engine'
 module Pageflow
   module Localfocus
     def self.plugin
-      Plugin.new
+      Localfocus::Plugin.new
     end
 
     def self.page_type
