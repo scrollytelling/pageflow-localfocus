@@ -1,4 +1,21 @@
-# Localfocus integration for Pageflow
+# 📊 LocalFocus integration for Pageflow
+
+[LocalFocus](https://www.localfocus.nl/en/) lets you create and share
+animated illustrations for a wide range of datasets. What you are reading now
+is a custom integration with Open Source storytelling tool [Pageflow](https://pageflow.io). And it's brought to you by [☢Scrollytelling☣](https://www.scrollytelling.io):
+two Amsterdammers❌❌❌ in pyjama with their unstoppable storytelling tank.
+
+### Includes LocalFocus API
+
+```
+Version: 1.1
+Date: 09-01-2017
+```
+
+The official [LocalFocus JavaScript Widget SDK](https://developers.localfocus.nl/widgets/) is bundled with this plugin.
+
+We use it to show a spinner while the chart is loading in the background. When
+everything is ready, the chart appears in place.
 
 
 ## Installation
