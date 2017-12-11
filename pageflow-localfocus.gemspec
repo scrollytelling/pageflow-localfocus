@@ -12,6 +12,7 @@ Gem::Specification.new do |spec|
   spec.summary       = "Localfocus charts integration for Pageflow"
   spec.description   = "Localfocus charts integration for Pageflow"
   spec.homepage      = "https://github.com/scrollytelling/pageflow-localfocus"
+  spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
