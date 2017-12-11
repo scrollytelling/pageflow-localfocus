@@ -21,14 +21,11 @@ pageflow.localfocus.UrlInputView = Backbone.Marionette.ItemView.extend({
   onChange: function() {
     save();
     validate();
-  }
-
-  initialize: function() {
-    this.listenTo(this.ui.input, 'input', this.onChange);
-  }
+  },
 
   load: function() {
     this.ui.input.val(this.model.get(this.options.propertyName));
+    this.listenTo(this.ui.input, 'input', this.onChange);
   },
 
   save: function() {

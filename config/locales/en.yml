@@ -1,9 +1,9 @@
 en:
   pageflow:
     localfocus:
-      page_type_name: Embed a Localfocus chart
+      page_type_name: Localfocus
       page_type_description: Embed a Localfocus chart
-      page_type_category_name: Charts
+      page_type_category_name: Data and Charts
       help_entries:
         page_type:
           menu_item: Localfocus

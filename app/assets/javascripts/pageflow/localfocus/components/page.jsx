@@ -5,17 +5,23 @@
     PageContent, PageHeader, PageText
   } = pageflow.react.components;
 
-  function Page(props) {
-    return (
-      <PageWrapper>
-        <PageBackground>
-        </PageBackground>
+  const {
+    LocalfocusIframe
+  } = pageflow.localfocus;
 
-        <PageContent>
-          <LocalfocusIframe/>
-        </PageContent>
-      </PageWrapper>
-    );
+  class Page extends React.Component {
+    render() {
+      return (
+        <PageWrapper>
+          <PageBackground>
+          </PageBackground>
+
+          <PageContent>
+            <LocalfocusIframe/>
+          </PageContent>
+        </PageWrapper>
+      )
+    }
   }
 
   const {registerPageType, connectInPage, combine} = pageflow.react;
