@@ -1,0 +1,10 @@
+en:
+  pageflow:
+    localfocus:
+      page_type_name: Embed a Localfocus chart
+      page_type_description: Embed a Localfocus chart
+      page_type_category_name: Charts
+      help_entries:
+        page_type:
+          menu_item: Localfocus
+          text: Paste the localfocus URL in the field.
