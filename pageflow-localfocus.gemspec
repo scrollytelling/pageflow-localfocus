@@ -22,6 +22,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'pageflow', '~> 12.x'
   spec.add_dependency 'pageflow-public-i18n', '~> 1.12.x'
+  spec.add_dependency 'rails'
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"

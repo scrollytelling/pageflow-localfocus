@@ -1,4 +1,5 @@
 require "pageflow/localfocus/version"
+require "pageflow/localfocus/engine"
 
 module Pageflow
   module Localfocus
