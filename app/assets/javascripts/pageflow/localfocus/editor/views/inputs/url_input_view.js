@@ -22,23 +22,12 @@ pageflow.localfocus.UrlInputView = Backbone.Marionette.ItemView.extend({
   },
 
   events: {
-    'change': 'onChange'
+    'blur input': 'validate'
   },
 
   onRender: function() {
+    this.ui.input.attr('title', I18n.t('pageflow.ui.views.inputs.text_input_view.required_field'));
     this.load();
-    this.validate();
-
-    this.listenTo(this.model, 'change:' + this.options.propertyName, this.load);
-  },
-
-  onChange: function() {
-    this.validate();
-    this.save();
-  },
-
-  onClose: function() {
-    this.save();
   },
 
   save: function() {
@@ -50,21 +39,13 @@ pageflow.localfocus.UrlInputView = Backbone.Marionette.ItemView.extend({
   },
 
   validate: function() {
-    if (this.options.required && !this.ui.input.val()) {
-      this.displayValidationError(I18n.t('pageflow.ui.views.inputs.text_input_view.required_field'));
+    input = this.ui.input[0];
+    if (input.checkValidity()) {
+      this.$el.removeClass('invalid');
+      this.save();
     }
     else {
-      this.resetValidationError();
+      this.$el.addClass('invalid');
     }
-  },
-
-  displayValidationError: function(message) {
-    this.$el.addClass('invalid');
-    this.ui.input.attr('title', message);
-  },
-
-  resetValidationError: function(message) {
-    this.$el.removeClass('invalid');
-    this.ui.input.attr('title', '');
   }
 });

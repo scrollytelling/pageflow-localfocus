@@ -18,3 +18,7 @@ en:
       configuration_editor:
         tabs:
           widget: Widget
+      views:
+        inputs:
+          url_input_view:
+            title: Alleen URLs van LocalFocus worden ondersteund
