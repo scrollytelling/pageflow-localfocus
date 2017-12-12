@@ -5,8 +5,10 @@ en:
         localfocus_url: Graph URL
   pageflow:
     localfocus:
-      page_type_name: Localfocus
-      page_type_description: Embed a Localfocus chart
+      page_type_feature:
+        name: LocalFocus page type
+      page_type_name: LocalFocus
+      page_type_description: Embed a LocalFocus chart
       page_type_category_name: Data and Charts
       help_entries:
         page_type:
