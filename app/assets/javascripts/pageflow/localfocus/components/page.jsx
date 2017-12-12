@@ -1,7 +1,7 @@
 (function() {
   const {
     PageWrapper,
-    PageBackground, PageBackgroundImage, PageShadow,
+    MediaPageBackground, PageBackgroundImage, PageShadow,
     PageContent, PageHeader, PageText
   } = pageflow.react.components;
 
@@ -10,14 +10,18 @@
   } = pageflow.localfocus;
 
   class Page extends React.Component {
+    constructor(props) {
+      super(props);
+    }
+
     render() {
       return (
         <PageWrapper>
-          <PageBackground>
-          </PageBackground>
+          <MediaPageBackground page={this.props.page} />
 
           <PageContent>
-            <Frame/>
+            <Frame page={this.props.page}/>
+            <PageText page={this.props.page} />
           </PageContent>
         </PageWrapper>
       );
@@ -32,6 +36,11 @@
       combine({
         page: pageAttributes()
       })
-    )(Page)
+    )(Page),
+
+    // Enable page state reducers and sagas to handle playback
+    reduxModules: [
+      pageflow.react.mediaPageBackgroundReduxModule
+    ]
   });
 }());

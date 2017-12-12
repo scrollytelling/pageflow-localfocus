@@ -5,12 +5,13 @@
         <div className="lf-frame">
           <div className="lf-loading"></div>
           <iframe
-            className="localfocusvisual"
-            scrolling="no"
-            frameBorder="0"
-            style={{width: '100%', height: '550px', overflow: 'hidden'}}
+            src={this.props.localfocus_url}
+            className={this.props.className}
+            scrolling={this.props.scrolling}
+            frameBorder={this.props.frameBorder}
+            style={this.props.style}
             ref={iframe => this.iframe = iframe}
-            src="https://localfocus2.appspot.com/551a9626918b3">
+          >
           </iframe>
         </div>
       )
@@ -19,6 +20,13 @@
     shouldComponentUpdate() {
       return false;
     }
+  }
+
+  Frame.defaultProps = {
+    className: 'localfocusvisual',
+    scrolling: 'no',
+    frameBorder: '0',
+    style: {width: '100%', height: '550px', overflow: 'hidden'}
   }
 
   const {connectInPage, combine} = pageflow.react;

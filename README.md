@@ -1,7 +1,7 @@
 # 📊 LocalFocus integration for Pageflow
 
 [LocalFocus](https://www.localfocus.nl/en/) lets you create and share
-animated illustrations for a wide range of datasets.
+animated illustrations for a wide range of datasets. [Example](https://localfocus2.appspot.com/551a9626918b3)
 
 What you are reading now
 is a custom integration with Open Source storytelling tool [Pageflow](https://pageflow.io). And it's brought to you by [☢Scrollytelling☣](https://www.scrollytelling.io):
@@ -47,3 +47,6 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/scrollytelling/pageflow-localfocus.
+
+Photo by Billy Huynh on Unsplash
+https://unsplash.com/photos/W8KTS-mhFUE
