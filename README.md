@@ -45,25 +45,29 @@ end
 
 Include javascripts and stylesheets:
 
-# app/assets/javascripts/components.js
+``` javascript
+/* app/assets/javascripts/components.js */
 //= require "pageflow/localfocus/components"
 
-# app/assets/javascripts/pageflow/application.js
+/* app/assets/javascripts/pageflow/application.js */
 //= require "pageflow/localfocus"
 
-# app/assets/javascripts/pageflow/editor.js
+/* app/assets/javascripts/pageflow/editor.js */
 //= require pageflow/localfocus/editor
+```
 
+``` scss
 # app/assets/stylesheets/pageflow/application.scss
 @import "pageflow/localfocus";
+```
 
-Now you can enable the page type in your feature settings.
+Now you can enable the feature for those accounts that can have it, and enable page type in the feature settings.
 
 ## Usage
 
 1. Login as an editor and open any story in the editor
 2. Add a new page and choose type **LocalFocus**
-3. In the *Widget* tab, enter the graph URL you want to show
+3. In the *Widget* tab, enter the graph's _Direct Link_
 
 The graph should appear right away. Happy graphing!
 
@@ -79,5 +83,3 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/scrollytelling/pageflow-localfocus.
 
-Photo by Billy Huynh on Unsplash
-https://unsplash.com/photos/W8KTS-mhFUE
