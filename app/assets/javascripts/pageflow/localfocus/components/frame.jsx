@@ -16,10 +16,6 @@
         </div>
       )
     }
-
-    shouldComponentUpdate() {
-      return false;
-    }
   }
 
   Frame.defaultProps = {
