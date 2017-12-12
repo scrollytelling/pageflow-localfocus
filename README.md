@@ -34,11 +34,42 @@ And then execute:
 
     $ bundle
 
+Register the plugin:
+
+``` ruby
+# config/initializers/pageflow.rb
+Pageflow.configure do |config|
+  config.plugin(Pageflow::Localfocus.plugin)
+end
+```
+
+Include javascripts and stylesheets:
+
+# app/assets/javascripts/components.js
+//= require "pageflow/localfocus/components"
+
+# app/assets/javascripts/pageflow/application.js
+//= require "pageflow/localfocus"
+
+# app/assets/javascripts/pageflow/editor.js
+//= require pageflow/localfocus/editor
+
+# app/assets/stylesheets/pageflow/application.scss
+@import "pageflow/localfocus";
+
+Now you can enable the page type in your feature settings.
+
 ## Usage
 
-TODO: Write usage instructions here
+1. Login as an editor and open any story in the editor
+2. Add a new page and choose type **LocalFocus**
+3. In the *Widget* tab, enter the graph URL you want to show
 
-## Development
+The graph should appear right away. Happy graphing!
+
+## Want to help developing this plugin?
+
+That's cool and help is always needed!
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
