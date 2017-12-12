@@ -1,10 +1,10 @@
 en:
-  activerecord:
-    attributes:
-      pageflow/page:
-        localfocus_url: Graph URL
   pageflow:
     localfocus:
+      page_attributes:
+        localfocus_url:
+          label: Graph URL
+          inline_help: Paste the direct link to the graph here. In LocalFocus, see the “Create” tab, click _Widget_, then copy the _Direct Link_.
       page_type_feature:
         name: LocalFocus page type
       page_type_name: LocalFocus
@@ -12,8 +12,29 @@ en:
       page_type_category_name: Data and Charts
       help_entries:
         page_type:
-          menu_item: Localfocus
-          text: Paste the localfocus URL in the field.
+          menu_item: LocalFocus
+          text: |-
+            Select this Page Type to embed a [LocalFocus](https://www.localfocus.nl/en/) graph.
+
+            LocalFocus lets you create and share animated illustrations for a
+            wide range of datasets. [Example](https://localfocus2.appspot.com/551a9626918b3)
+
+            ### In LocalFocus
+
+            To embed one in a story, first login to LocalFocus and find the
+            chart in question. Around half-way on the page you'll see two tabs.
+            One labelled _Explore_ and the other _Create_. Choose Create.
+
+            The sharing options are displayed as red buttons. Choose for
+            **Widget** here. Then copy the value of _Direct Link_. You don't
+            need to use the complete Embed code; we take care of that for you.
+
+            ### In Pageflow
+
+            Now onto your story and the Pageflow editor. Login to Pageflow and
+            add a new page. For Page Type, choose _LocalFocus_. Then click the
+            _Widget_ tab. Paste the _Direct Link_ into the box. The graph
+            should render in the preview pane on the right.
     ui:
       configuration_editor:
         tabs:
