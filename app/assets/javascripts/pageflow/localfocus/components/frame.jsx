@@ -8,7 +8,6 @@
             src={this.props.page.localfocusUrl}
             className={this.props.className}
             scrolling={this.props.scrolling}
-            frameBorder={this.props.frameBorder}
             style={this.props.style}
             ref={iframe => this.iframe = iframe}
           >
@@ -21,7 +20,6 @@
   Frame.defaultProps = {
     className: 'localfocusvisual',
     scrolling: 'no',
-    frameBorder: '0',
     style: {width: '100%', height: '550px', overflow: 'hidden'}
   }
 
