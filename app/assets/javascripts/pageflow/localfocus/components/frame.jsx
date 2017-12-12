@@ -5,7 +5,7 @@
         <div className="lf-frame">
           <div className="lf-loading"></div>
           <iframe
-            src={this.props.localfocus_url}
+            src={this.props.page.localfocusUrl}
             className={this.props.className}
             scrolling={this.props.scrolling}
             frameBorder={this.props.frameBorder}
