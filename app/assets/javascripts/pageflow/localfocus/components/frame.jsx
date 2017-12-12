@@ -7,8 +7,6 @@
           <iframe
             src={this.props.page.localfocusUrl}
             className={this.props.className}
-            scrolling={this.props.scrolling}
-            style={this.props.style}
             ref={iframe => this.iframe = iframe}
           >
           </iframe>
@@ -18,9 +16,7 @@
   }
 
   Frame.defaultProps = {
-    className: 'localfocusvisual',
-    scrolling: 'no',
-    style: {width: '100%', height: '550px', overflow: 'hidden'}
+    className: 'localfocusvisual lf-iframe'
   }
 
   const {connectInPage, combine} = pageflow.react;

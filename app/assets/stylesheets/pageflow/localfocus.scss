@@ -1,1 +1,7 @@
 @include pageflow-page-type(localfocus);
+
+.lf-iframe {
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
