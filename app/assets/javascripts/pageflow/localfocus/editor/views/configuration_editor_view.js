@@ -4,8 +4,9 @@ pageflow.localfocus.ConfigurationEditorView = pageflow.ConfigurationEditorView.e
       this.group('general');
     });
 
-    this.tab('files', function() {
-      this.input('link', pageflow.localfocus.UrlInputView, {
+    this.tab('widget', function() {
+      this.input('chart', pageflow.localfocus.UrlInputView, {
+        propertyName: 'localfocus_url',
         required: true,
         pattern: "https://localfocus2.appspot.com/.*", // I18n.t('pageflow.localfocus.placeholder', {locale: pageflow.entry.configuration.get('locale')})
         title: "Only localfocus URLs are allowed",

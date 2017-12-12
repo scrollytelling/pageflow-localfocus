@@ -6,7 +6,7 @@
   } = pageflow.react.components;
 
   const {
-    LocalfocusIframe
+    Frame
   } = pageflow.localfocus;
 
   class Page extends React.Component {
@@ -17,10 +17,10 @@
           </PageBackground>
 
           <PageContent>
-            <LocalfocusIframe/>
+            <Frame/>
           </PageContent>
         </PageWrapper>
-      )
+      );
     }
   }
 

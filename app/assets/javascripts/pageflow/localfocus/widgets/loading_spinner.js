@@ -16,10 +16,12 @@
 //       }
 
 
-LocalFocusAPI.selectAll('.localfocusvisual').on('loaded', function() {
+LocalFocusAPI.selectAll('.localfocusvisual', function() {
+  this.on('loaded', function() {
+    console.log('loaded');
+  });
 
-}).on('ready', function() {
-  // Wait for the widget to be ready
-  this.element.animate({opacity: '1'});
-  this.up('.spinner').fadeOut();
-})
+  this.on('ready', function() {
+    console.log('ready');
+  });
+}

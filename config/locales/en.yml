@@ -1,4 +1,8 @@
 en:
+  activerecord:
+    attributes:
+      pageflow/page:
+        localfocus_url: Graph URL
   pageflow:
     localfocus:
       page_type_name: Localfocus
@@ -8,3 +12,7 @@ en:
         page_type:
           menu_item: Localfocus
           text: Paste the localfocus URL in the field.
+    ui:
+      configuration_editor:
+        tabs:
+          widget: Widget

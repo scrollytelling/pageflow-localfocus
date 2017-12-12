@@ -1,43 +1,60 @@
 /**
- * Input view for an URL.
+ * Input view for a single line of text.
+ *
+ * @param {boolean} [options.required=false]
+ *   Display an error if the input is blank.
+ *
+ * @see
+ * {@link module:pageflow/ui.pageflow.inputWithPlaceholderText pageflow.inputWithPlaceholderText}
+ * for placeholder related further options
  *
  * @see {@link module:pageflow/ui.pageflow.inputView pageflow.inputView} for further options
  * @class
- * @memberof module:pageflow/localfocus
+ * @memberof module:pageflow/ui
  */
 pageflow.localfocus.UrlInputView = Backbone.Marionette.ItemView.extend({
-  mixins: [pageflow.inputView],
+  mixins: [pageflow.inputView, pageflow.inputWithPlaceholderText],
 
-  template: 'pageflow/chart/editor/templates/url_input',
+  template: 'pageflow/localfocus/editor/templates/url_input',
 
   ui: {
     input: 'input'
   },
 
+  events: {
+    'change': 'onChange'
+  },
+
   onRender: function() {
-    load();
+    this.load();
+    this.validate();
+
+    this.listenTo(this.model, 'change:' + this.options.propertyName, this.load);
   },
 
   onChange: function() {
-    save();
-    validate();
+    this.validate();
+    this.save();
   },
 
-  load: function() {
-    this.ui.input.val(this.model.get(this.options.propertyName));
-    this.listenTo(this.ui.input, 'input', this.onChange);
+  onClose: function() {
+    this.save();
   },
 
   save: function() {
     this.model.set(this.options.propertyName, this.ui.input.val());
   },
 
+  load: function() {
+    this.ui.input.val(this.model.get(this.options.propertyName));
+  },
+
   validate: function() {
-    if (this.ui.input.validity.valid) {
-      this.resetValidationError();
+    if (this.options.required && !this.ui.input.val()) {
+      this.displayValidationError(I18n.t('pageflow.ui.views.inputs.text_input_view.required_field'));
     }
     else {
-      this.displayValidationError(I18n.t('pageflow.localfocus.views.inputs.text_input_view.required_field'));
+      this.resetValidationError();
     }
   },
 
