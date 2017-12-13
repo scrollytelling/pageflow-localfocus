@@ -61,6 +61,8 @@ Include javascripts and stylesheets:
 @import "pageflow/localfocus";
 ```
 
+[Review our own pull request](https://github.com/scrollytelling/app/pull/27) so see it all in one place.
+
 Now you can enable the feature for those accounts that can have it, and enable page type in the feature settings.
 
 ## Usage
