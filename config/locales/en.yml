@@ -5,11 +5,10 @@ en:
         localfocus_url:
           label: Graph URL
           inline_help: Paste the direct link to the graph here. In LocalFocus, see the “Create” tab, click _Widget_, then copy the _Direct Link_.
-      page_type_feature:
-        name: LocalFocus page type
       page_type_name: LocalFocus
-      page_type_description: Embed a LocalFocus chart
       page_type_category_name: Data and Charts
+      page_type_description: Embed a LocalFocus chart
+      page_type_feature_name: LocalFocus page type
       help_entries:
         page_type:
           menu_item: LocalFocus
